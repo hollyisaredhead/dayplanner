@@ -43,7 +43,7 @@ for (i = 0; i < 9; i++) {
 
     col1.text(ovrTime);
 
-    var usrInput = $("<textarea class = 'w-100 h-100'>")
+    var usrInput = $("<textarea class = 'auto'>")
     col2.append(usrInput);
 
     usrInput.attr('class', currentTime)
@@ -64,7 +64,6 @@ for (i = 0; i < 9; i++) {
     const addAnwser = (ev) => {
         ev.preventDefault();  //to stop the form submitting
         let answers = {
-            id: Date.now(),
         
         }
 
@@ -81,5 +80,5 @@ for (i = 0; i < 9; i++) {
     localStorage.setItem('Mycalendarlist', JSON.stringify(answers) );
 }
 document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('svBtn').addEventListener('click', answers);
+    svBtn.addEventListener('click', answers);
 });
