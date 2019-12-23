@@ -48,7 +48,7 @@ for (i = 0; i < 9; i++) {
 
     usrInput.attr('class', currentTime)
 
-    var svBtn = $("<button class = 'saveBtn w-100 h-100'>")
+    var svBtn = $("<button class = 'saveBtn w-100 h-100 form-control'>")
     col3.append(svBtn);
 
     
