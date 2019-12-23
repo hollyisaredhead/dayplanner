@@ -51,6 +51,7 @@ for (i = 0; i < 9; i++) {
     var svBtn = $("<button class = 'saveBtn w-100 h-100'>")
     col3.append(svBtn);
 
+    
     //svBtn.click(localStorage.setItem())
 
     newRow.append(col1, col2, col3);
@@ -58,13 +59,27 @@ for (i = 0; i < 9; i++) {
     newRow.attr('id', i);
     $(".container").append(newRow);
 
-    // localStorage.usrInput = "";
-    if (window.localStorage) {
-        usrInput.click('input', function () {
-            localStorage.setItem('textarea', usrInput.value);
-        }, false);
+    answers = [];
+
+    const addAnwser = (ev) => {
+        ev.preventDefault();  //to stop the form submitting
+        let answers = {
+            id: Date.now(),
+        
+        }
+
+        answers.push(usrInput);
+        //localStorage.usrInput = "dsaf";
+        //if (window.localStorage) {
+        //  usrInput.click('input', function () {
+        //    localStorage.setItem('textarea', usrInput.value);
+        //}, false);
+        //}
+        //svBtn.click(localStorage.usrInput = "")
+
     }
-  //svBtn.click(localStorage.usrInput = "")
-
+    localStorage.setItem('Mycalendarlist', JSON.stringify(answers) );
 }
-
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('svBtn').addEventListener('click', answers);
+});
